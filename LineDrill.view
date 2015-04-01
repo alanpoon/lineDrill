@@ -12,7 +12,7 @@
     "position":{
       "jsonClass":"Position",
       "elxType":"Position",
-      "height":"500",
+      "height":"600",
       "width":"800",
       "zIndex":"auto"
     },
@@ -48,16 +48,6 @@
             "attrs":[]
           },{
             "jsonClass":"SchemaColumn",
-            "name":"Year",
-            "dtype":"String",
-            "attrs":[]
-          },{
-            "jsonClass":"SchemaColumn",
-            "name":"Month",
-            "dtype":"String",
-            "attrs":[]
-          },{
-            "jsonClass":"SchemaColumn",
             "name":"hv_description",
             "dtype":"String",
             "attrs":[]
@@ -81,156 +71,6 @@
               "value":"2014-11-22"
             },{
               "jsonClass":"Field",
-              "value":"2014"
-            },{
-              "jsonClass":"Field",
-              "value":"11"
-            },{
-              "jsonClass":"Field",
-              "value":"Visited"
-            }]
-          },{
-            "jsonClass":"Record",
-            "fields":[{
-              "jsonClass":"Field",
-              "value":"North East CDC"
-            },{
-              "jsonClass":"Field",
-              "value":"Aljunied GRC"
-            },{
-              "jsonClass":"Field",
-              "value":"Eunos"
-            },{
-              "jsonClass":"Field",
-              "value":"2014-11-23"
-            },{
-              "jsonClass":"Field",
-              "value":"2014"
-            },{
-              "jsonClass":"Field",
-              "value":"11"
-            },{
-              "jsonClass":"Field",
-              "value":"Not Visited"
-            }]
-          },{
-            "jsonClass":"Record",
-            "fields":[{
-              "jsonClass":"Field",
-              "value":"North East CDC"
-            },{
-              "jsonClass":"Field",
-              "value":"Aljunied GRC"
-            },{
-              "jsonClass":"Field",
-              "value":"Kaki Bukit"
-            },{
-              "jsonClass":"Field",
-              "value":"2014-11-24"
-            },{
-              "jsonClass":"Field",
-              "value":"2014"
-            },{
-              "jsonClass":"Field",
-              "value":"11"
-            },{
-              "jsonClass":"Field",
-              "value":"Wrong Address"
-            }]
-          },{
-            "jsonClass":"Record",
-            "fields":[{
-              "jsonClass":"Field",
-              "value":"North East CDC"
-            },{
-              "jsonClass":"Field",
-              "value":"Aljunied GRC"
-            },{
-              "jsonClass":"Field",
-              "value":"Paya Lebar"
-            },{
-              "jsonClass":"Field",
-              "value":"2014-11-25"
-            },{
-              "jsonClass":"Field",
-              "value":"2014"
-            },{
-              "jsonClass":"Field",
-              "value":"11"
-            },{
-              "jsonClass":"Field",
-              "value":"Visited"
-            }]
-          },{
-            "jsonClass":"Record",
-            "fields":[{
-              "jsonClass":"Field",
-              "value":"North East CDC"
-            },{
-              "jsonClass":"Field",
-              "value":"Aljunied GRC"
-            },{
-              "jsonClass":"Field",
-              "value":"Serangoon"
-            },{
-              "jsonClass":"Field",
-              "value":"2014-11-26"
-            },{
-              "jsonClass":"Field",
-              "value":"2014"
-            },{
-              "jsonClass":"Field",
-              "value":"11"
-            },{
-              "jsonClass":"Field",
-              "value":"Visited"
-            }]
-          },{
-            "jsonClass":"Record",
-            "fields":[{
-              "jsonClass":"Field",
-              "value":"North East CDC"
-            },{
-              "jsonClass":"Field",
-              "value":"Hougang SMC"
-            },{
-              "jsonClass":"Field",
-              "value":"Hougang"
-            },{
-              "jsonClass":"Field",
-              "value":"2014-11-27"
-            },{
-              "jsonClass":"Field",
-              "value":"2014"
-            },{
-              "jsonClass":"Field",
-              "value":"11"
-            },{
-              "jsonClass":"Field",
-              "value":"Wrong Address"
-            }]
-          },{
-            "jsonClass":"Record",
-            "fields":[{
-              "jsonClass":"Field",
-              "value":"North West CDC"
-            },{
-              "jsonClass":"Field",
-              "value":"Nee Soon GRC"
-            },{
-              "jsonClass":"Field",
-              "value":"Canberra"
-            },{
-              "jsonClass":"Field",
-              "value":"2014-11-29"
-            },{
-              "jsonClass":"Field",
-              "value":"2014"
-            },{
-              "jsonClass":"Field",
-              "value":"11"
-            },{
-              "jsonClass":"Field",
               "value":"Visited"
             }]
           }]
@@ -242,17 +82,16 @@
       "jsonClass":"Bundle",
       "type":"LineDrill",
       "data":{
-        "cdd_nameCol":"cdddata.cdd_name",
-        "cs_nameCol":"cdddata.cs_name",
-        "div_nameCol":"cdddata.div_name",
-        "visited_dateCol":"cdddata.visited_date",
-        "YearCol":"cdddata.Year",
-        "MonthCol":"cdddata.Month",
-        "hv_descriptionCol":"cdddata.hv_description"
+        "cdd_nameCol":"cdd_name",
+        "cs_nameCol":"cs_name",
+        "div_nameCol":"div_name",
+        "visited_dateCol":"visited_date",
+      
+        "hv_descriptionCol":"hv_description"
       }
     }
   },
-  "includes":["/elx/lib/d3.v3.js","/elx/lib/nv.d3.js","/elx/lib/tooltip.js","/elx/lib/utils.js","/elx/lib/legend.js","/elx/lib/line.js","/elx/lib/lineChart.js"],
+  "includes":["/elx/lib/d3.v3.js","/elx/lib/nv.d3.js"],
   "edit-section":[{
     "id":"data",
     "name":"Data"
@@ -609,574 +448,148 @@ elx.bundle.type.column_basicTran = {
 ========
 <<<<<<<=view-html=
 <style>
-
-body {
-  overflow-y:scroll;
-}
-
-text {
-  font: 12px sans-serif;
-}
-
-svg {
-  display: block;
-}
-  
-.chartWrap {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-
-.nvtooltip {
-  position: absolute;
-  background-color: rgba(255,255,255,1.0);
-  padding: 1px;
-  border: 1px solid rgba(0,0,0,.2);
-  z-index: 10000;
-
-  font-family: Arial;
-  font-size: 13px;
-  text-align: left;
-  pointer-events: none;
-
-  white-space: nowrap;
-
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/*Give tooltips that old fade in transition by
-    putting a "with-transitions" class on the container div.
-*/
-.nvtooltip.with-transitions, .with-transitions .nvtooltip {
-  transition: opacity 250ms linear;
-  -moz-transition: opacity 250ms linear;
-  -webkit-transition: opacity 250ms linear;
-
-  transition-delay: 250ms;
-  -moz-transition-delay: 250ms;
-  -webkit-transition-delay: 250ms;
-}
-
-.nvtooltip.x-nvtooltip,
-.nvtooltip.y-nvtooltip {
-  padding: 8px;
-}
-
-.nvtooltip h3 {
-  margin: 0;
-  padding: 4px 14px;
-  line-height: 18px;
-  font-weight: normal;
-  background-color: rgba(247,247,247,0.75);
-  text-align: center;
-
-  border-bottom: 1px solid #ebebeb;
-
-  -webkit-border-radius: 5px 5px 0 0;
-  -moz-border-radius: 5px 5px 0 0;
-  border-radius: 5px 5px 0 0;
-}
-
-.nvtooltip p {
-  margin: 0;
-  padding: 5px 14px;
-  text-align: center;
-}
-
-.nvtooltip span {
-  display: inline-block;
-  margin: 2px 0;
-}
-
-.nvtooltip table {
-  margin: 6px;
-  border-spacing:0;
-}
-
-
-.nvtooltip table td {
-  padding: 2px 9px 2px 0;
-  vertical-align: middle;
-}
-
-.nvtooltip table td.key {
-  font-weight:normal;
-}
-.nvtooltip table td.value {
-  text-align: right;
-  font-weight: bold;
-}
-
-.nvtooltip table tr.highlight td {
-  padding: 1px 9px 1px 0;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-top-style: solid;
-  border-top-width: 1px;
-}
-
-.nvtooltip table td.legend-color-guide div {
-  width: 8px;
-  height: 8px;
-  vertical-align: middle;
-}
-
-.nvtooltip .footer {
-  padding: 3px;
-  text-align: center;
-}
-
-
-.nvtooltip-pending-removal {
-  position: absolute;
-  pointer-events: none;
-}
-
-
-/********************
- * SVG CSS
- */
-
-svg {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  /* Trying to get SVG to act like a greedy block in all browsers */
-  display: block;
-  width:100%;
-  height:100%;
-}
-
-
-svg text {
-  font: normal 12px Arial;
-}
-
-svg .title {
- font: bold 14px Arial;
-}
-
-.nvd3 .nv-background {
-  fill: white;
-  fill-opacity: 0;
-}
-
-.nvd3.nv-noData {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-/**********
-*  Brush
-*/
-
-.nv-brush .extent {
-  fill-opacity: .125;
-  shape-rendering: crispEdges;
-}
-
-/**********
-*  Legend
-*/
-
-.nvd3 .nv-legend .nv-series {
-  cursor: pointer;
-}
-
-.nvd3 .nv-legend .disabled circle {
-  fill-opacity: 0;
-}
-
-/**********
-*  Axes
-*/
-.nvd3 .nv-axis {
-  pointer-events:none;
-}
-
-.nvd3 .nv-axis path {
-  fill: none;
-  stroke: #000;
-  stroke-opacity: .75;
-  shape-rendering: crispEdges;
-}
-
-.nvd3 .nv-axis path.domain {
-  stroke-opacity: .75;
-}
-
-.nvd3 .nv-axis.nv-x path.domain {
-  stroke-opacity: 0;
-}
-
-.nvd3 .nv-axis line {
-  fill: none;
-  stroke: #e5e5e5;
-  shape-rendering: crispEdges;
-}
-
-.nvd3 .nv-axis .zero line,
-/*this selector may not be necessary*/ .nvd3 .nv-axis line.zero {
-  stroke-opacity: .75;
-}
-
-.nvd3 .nv-axis .nv-axisMaxMin text {
-  font-weight: bold;
-}
-
-.nvd3 .x  .nv-axis .nv-axisMaxMin text,
-.nvd3 .x2 .nv-axis .nv-axisMaxMin text,
-.nvd3 .x3 .nv-axis .nv-axisMaxMin text {
-  text-anchor: middle
-}
-
-/**********
-*  Brush
-*/
-
-.nv-brush .resize path {
-  fill: #eee;
-  stroke: #666;
-}
-
-
-/**********
-* Lines
-*/
-
-.nvd3 .nv-groups path.nv-line {
-  fill: none;
-  stroke-width: 1.5px;
- 
-}
-
-.nvd3 .nv-groups path.nv-line.nv-thin-line {
-  stroke-width: 1px;
-}
-
-
-.nvd3 .nv-groups path.nv-area {
-  stroke: none;
-
-}
-
-.nvd3 .nv-line.hover path {
-  stroke-width: 6px;
-}
-
-
-.nvd3.nv-line .nvd3.nv-scatter .nv-groups .nv-point {
-  fill-opacity: 0;
-  stroke-opacity: 0;
-}
-
-.nvd3.nv-scatter.nv-single-point .nv-groups .nv-point {
-  fill-opacity: .5 !important;
-  stroke-opacity: .5 !important;
-}
-
-
-.with-transitions .nvd3 .nv-groups .nv-point {
-  transition: stroke-width 250ms linear, stroke-opacity 250ms linear;
-  -moz-transition: stroke-width 250ms linear, stroke-opacity 250ms linear;
-  -webkit-transition: stroke-width 250ms linear, stroke-opacity 250ms linear;
-
-}
-
-.nvd3.nv-scatter .nv-groups .nv-point.hover,
-.nvd3 .nv-groups .nv-point.hover {
-  stroke-width: 7px;
-  fill-opacity: .95 !important;
-  stroke-opacity: .95 !important;
-}
-
-
-.nvd3 .nv-point-paths path {
-  stroke: #aaa;
-  stroke-opacity: 0;
-  fill: #eee;
-  fill-opacity: 0;
-}
-
-
-
-.nvd3 .nv-indexLine {
-  cursor: ew-resize;
-}
-
-
-/**********
-* Distribution
-*/
-
-.nvd3 .nv-distribution {
-  pointer-events: none;
-}
-
-
-/****
-Interactive Layer
-*/
-.nvd3 .nv-interactiveGuideLine {
-  pointer-events:none;
-}
-.nvd3 line.nv-guideline {
-  stroke: #ccc;
-}
+body{overflow-y:scroll}text{font:12px sans-serif}svg{display:block}.chartWrap{margin:0;padding:0;overflow:hidden}.nvtooltip{position:absolute;background-color:rgba(255,255,255,1.0);padding:1px;border:1px solid rgba(0,0,0,.2);z-index:10000;font-family:Arial;font-size:13px;text-align:left;pointer-events:none;white-space:nowrap;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.nvtooltip.with-transitions,.with-transitions .nvtooltip{transition:opacity 250ms linear;-moz-transition:opacity 250ms linear;-webkit-transition:opacity 250ms linear;transition-delay:250ms;-moz-transition-delay:250ms;-webkit-transition-delay:250ms}.nvtooltip.x-nvtooltip,.nvtooltip.y-nvtooltip{padding:8px}.nvtooltip h3{margin:0;padding:4px 14px;line-height:18px;font-weight:400;background-color:rgba(247,247,247,0.75);text-align:center;border-bottom:1px solid #ebebeb;-webkit-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0;border-radius:5px 5px 0 0}.nvtooltip p{margin:0;padding:5px 14px;text-align:center}.nvtooltip span{display:inline-block;margin:2px 0}.nvtooltip table{margin:6px;border-spacing:0}.nvtooltip table td{padding:2px 9px 2px 0;vertical-align:middle}.nvtooltip table td.key{font-weight:400}.nvtooltip table td.value{text-align:right;font-weight:700}.nvtooltip table tr.highlight td{padding:1px 9px 1px 0;border-bottom-style:solid;border-bottom-width:1px;border-top-style:solid;border-top-width:1px}.nvtooltip table td.legend-color-guide div{width:8px;height:8px;vertical-align:middle}.nvtooltip .footer{padding:3px;text-align:center}.nvtooltip-pending-removal{position:absolute;pointer-events:none}svg{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:block;width:100%;height:100%}svg text{font:normal 12px Arial}svg .title{font:bold 14px Arial}.nvd3 .nv-background{fill:#fff;fill-opacity:0}.nvd3.nv-noData{font-size:18px;font-weight:700}.nv-brush .extent{fill-opacity:.125;shape-rendering:crispEdges}.nvd3 .nv-legend .nv-series{cursor:pointer}.nvd3 .nv-legend .disabled circle{fill-opacity:0}.nvd3 .nv-axis{pointer-events:none}.nvd3 .nv-axis path{fill:none;stroke:#000;stroke-opacity:.75;shape-rendering:crispEdges}.nvd3 .nv-axis path.domain{stroke-opacity:.75}.nvd3 .nv-axis.nv-x path.domain{stroke-opacity:0}.nvd3 .nv-axis line{fill:none;stroke:#e5e5e5;shape-rendering:crispEdges}.nvd3 .nv-axis .zero line,/*this selector may not be necessary*/ .nvd3 .nv-axis line.zero{stroke-opacity:.75}.nvd3 .nv-axis .nv-axisMaxMin text{font-weight:700}.nvd3 .x .nv-axis .nv-axisMaxMin text,.nvd3 .x2 .nv-axis .nv-axisMaxMin text,.nvd3 .x3 .nv-axis .nv-axisMaxMin text{text-anchor:middle}.nv-brush .resize path{fill:#eee;stroke:#666}.nvd3 .nv-groups path.nv-line{fill:none;stroke-width:1.5px}.nvd3 .nv-groups path.nv-line.nv-thin-line{stroke-width:1px}.nvd3 .nv-groups path.nv-area{stroke:none}.nvd3 .nv-line.hover path{stroke-width:6px}.nvd3.nv-line .nvd3.nv-scatter .nv-groups .nv-point{fill-opacity:0;stroke-opacity:0}.nvd3.nv-scatter.nv-single-point .nv-groups .nv-point{fill-opacity:.5!important;stroke-opacity:.5!important}.with-transitions .nvd3 .nv-groups .nv-point{transition:stroke-width 250ms linear,stroke-opacity 250ms linear;-moz-transition:stroke-width 250ms linear,stroke-opacity 250ms linear;-webkit-transition:stroke-width 250ms linear,stroke-opacity 250ms linear}.nvd3.nv-scatter .nv-groups .nv-point.hover,.nvd3 .nv-groups .nv-point.hover{stroke-width:7px;fill-opacity:.95!important;stroke-opacity:.95!important}.nvd3 .nv-point-paths path{stroke:#aaa;stroke-opacity:0;fill:#eee;fill-opacity:0}.nvd3 .nv-indexLine{cursor:ew-resize}.nvd3 .nv-distribution{pointer-events:none}.nvd3 .nv-interactiveGuideLine{pointer-events:none}.nvd3 line.nv-guideline{stroke:#ccc}
 
 </style>
-  <div id="chartZoom">
-    <a href="#" id="zoomIn">Zoom In</a> <a href="#" id="zoomOut">Zoom Out</a>
-     <button id="title" style="height:15px;font-size:8px;font-weight:bold;font-align:center;">Back</button>
-  </div>
 
-  <div id="chart1" class='with-transitions'>       
+
+  <div id="chart_preview" class='with-transitions'>       
     <svg style='height:500px;width:600px'></svg>
       
   </div>
-<div id='${id}'></div>	
+
 <div class='elx-script'>
 
- 
- var div = $("#${id}");
- var view = elx.host.getViewById("${id}");
- var rawdata =${code};
-  console.log('rawdataold', JSON.stringify(rawdata));
- var processeddata=[];
- var countlevel = 0;
- var levelonedata=[];
- var emptyArr=[];
- var values=[];
- var unixArr=[];
- var sample = {
- namespace : {}};
- sample.namespace.clickedItem = 
-  {'North East CDC': 0,'North West CDC': 1,'South East CDC':2,'South West CDC':3,'Central CDC': 4,'Threshold':5};
- var obj = sample.namespace.clickedItem;
+ var viewId='preview';
 
-  var samplelevelone = {
- namespacelevelone : {}};
- samplelevelone.namespacelevelone.clickedItem = 
-  {'NE1':0,'NE2':1,'NE3':2};
-  
- var objlevelone = samplelevelone.namespacelevelone.clickedItem;
-
-  
-  rawdata.forEach(function(d) {
-  console.log('cdd_nameCol',d[view.typeinfo.data.cdd_nameCol]);
-  processeddata.push({
-  
-  "CDD" :d[view.typeinfo.data.cdd_nameCol],
-  "Year" :d[view.typeinfo.data.YearCol],
-  "Month":d[view.typeinfo.data.MonthCol],
-  "GRC":d[view.typeinfo.data.cs_nameCol],
-  "Division":d[view.typeinfo.data.div_nameCol],
-  "VisitedDate" : d[view.typeinfo.data.visited_dateCol],
-  "hv_description":d[view.typeinfo.data.hv_descriptionCol]
-  
-  
+ var rawdata =${data};
+  var rawdata=[  
+  ["Bedok Reservoir-Punggol","2014-11-22",25 ],
+  ["Bedok Reservoir-Punggol","2014-11-23",35 ],
+  ["Bedok Reservoir-Punggol","2014-11-24",70  ],
+  ["Bedok Reservoir-Punggol","2014-11-25",96 ],
+  ["Bedok Reservoir-Punggol","2014-11-26",20 ],
+  ["Bedok Reservoir-Punggol","2014-11-27",14 ],
+  ["Bedok Reservoir-Punggol","2014-11-29",60  ], 
+  ["Tampines","2014-11-22",10 ],
+  ["Tampines","2014-11-23",50],
+  ["Tampines","2014-11-24",50  ],
+  ["Tampines","2014-11-25",50 ],
+  ["Tampines","2014-11-26",70 ],
+  ["Tampines","2014-11-27",70 ],
+  ["Tampines","2014-11-29",70  ]
+];
+  var chartGen,minMaxDateFn,forChartFn;
+  debugFn();
+  var rawdata=_.map(rawdata,function(d){
+  return {series:d[0],date:d[1],value:d[2]};
   });
-  });  rawdata = processeddata;
-  console.log('processeddata',JSON.stringify(processeddata));
- var visitedStatus = _.where(rawdata, {"hv_description": "Visited"});
-   console.log('visitedStatus',JSON.stringify(visitedStatus));
- visitedStatus.forEach(function(d) {
- var dateinfo = d.VisitedDate;
-  levelonedata.push({
-  "CDD" :d.CDD,
-  "GRC":d.GRC,
-  "Division":d.Division,
-  "VisitedDate" : ((new Date((dateinfo).toString()).getTime()/1000)).toString().concat('000')
-  })
+  var parseDateStr="%Y-%m-%d";
+  
+  var processDateData=_.map(rawdata,function(d){
+  return {'series':d.series, 'date':d3.time.format(parseDateStr).parse(d.date),'value':d.value};
   });
-  console.log('levelonedata',JSON.stringify(levelonedata));
-  levelonedata.forEach(function(d) { unixArr.push(parseInt(d.VisitedDate))});
-  var group = _.groupBy(levelonedata,function(d){return d["CDD"];});
-  var count  = 1
-    _.each(group,function(u,t){
-  values.push([parseInt(_.pluck(u,'VisitedDate')),((count*100/levelonedata.length).toFixed(2))]);
-  
-var  key =(_.first(_.pluck(u,'CDD')));
-  emptyArr.push( {key ,values });
-  count = count +1 ;
-  
-  });
-  
-
-  draw(emptyArr,unixArr);
-  function draw(emptyArr,unixArr){
-  nv.addGraph(function() {
-  var fitScreen = false;
-  var chart = nv.models.lineChart()
-        .forceY([0, 100])
-        .forceX(unixArr[0],unixArr[length-1])
-        .x(function(d) { return d[0] })
-        .y(function(d) { return d[1] }) //adjusting, 100% is 1.00, not 100 as it is in the data
-        .color(d3.scale.category10().range())
-  
-  .options({
-  margin: {left: 50, bottom: 100},
-    showXAxis: true,
-    showYAxis: true,
-    transitionDuration: 250
-  })
-  ;
-  var zoom = 1;
-  var dispatch = d3.dispatch('chartClick', 'elementClick');
-  chart.useInteractiveGuideline(true);
- 
-  chart.xAxis
-        .axisLabel("Date")
-        .ticks(levelonedata.length)
-        .tickValues(unixArr)
-        .tickFormat(function(d) {
-            return d3.time.format('%x')(new Date(d))
-          });
-  
-  
-  chart.yAxis.axisLabel("Count").tickFormat(d3.format(","));
- 
-  chart.xAxis.rotateLabels(-90);
-  
-  chart.dispatch = dispatch;
-  var width = 600;
-  var height = 450;
-  d3.select('#chart1 svg')
-      .attr('perserveAspectRatio', 'xMinYMid')
-      .attr('width', width)
-      .attr('height', height)
-      .datum(emptyArr);
-
-  setChartViewBox();
-  resizeChart();
-  
-  nv.utils.windowResize(resizeChart);
-
-  d3.select('#zoomIn').on('click', zoomIn);
-  d3.select('#zoomOut').on('click', zoomOut);
-   
-
-  function setChartViewBox() {
-    var w = width * zoom,
-        h = height * zoom;
-
-    chart
-        .width(w)
-        .height(h);
-
-    d3.select('#chart1 svg')
-        .attr('viewBox', '0 0 ' + w + ' ' + h)
-      .transition().duration(500)
-        .call(chart);
+  var groupByDateStr="%d-%m-%Y";
+  var forChartData=forChartFn(processDateData,groupByDateStr);
+ console.log('forChartData', JSON.stringify(forChartData));
+var minMaxDateArr=minMaxDateFn(processDateData);
+console.log("minMaxDateArr",minMaxDateArr);
+/*forChartData=[
+  {
+    "key" : "Quantity",
+    "values" : [ [ 1136005200000 , 1271000.0] , [ 1138683600000 , 1271000.0] , [ 1141102800000 , 1271000.0] , [ 1143781200000 , 0] , [ 1146369600000 , 0] , [ 1149048000000 , 0] , [ 1151640000000 , 0] , [ 1154318400000 , 0] , [ 1156996800000 , 0] , [ 1159588800000 , 3899486.0] , [ 1162270800000 , 3899486.0] , [ 1164862800000 , 3899486.0] , [ 1167541200000 , 3564700.0] , [ 1170219600000 , 3564700.0] , [ 1172638800000 , 3564700.0] , [ 1175313600000 , 2648493.0] , [ 1177905600000 , 2648493.0] , [ 1180584000000 , 2648493.0] , [ 1183176000000 , 2522993.0] , [ 1185854400000 , 2522993.0] , [ 1188532800000 , 2522993.0] , [ 1191124800000 , 2906501.0] , [ 1193803200000 , 2906501.0] , [ 1196398800000 , 2906501.0] , [ 1199077200000 , 2206761.0] , [ 1201755600000 , 2206761.0] , [ 1204261200000 , 2206761.0] , [ 1206936000000 , 2287726.0] , [ 1209528000000 , 2287726.0] , [ 1212206400000 , 2287726.0] , [ 1214798400000 , 2732646.0] , [ 1217476800000 , 2732646.0] , [ 1220155200000 , 2732646.0] , [ 1222747200000 , 2599196.0] , [ 1225425600000 , 2599196.0] , [ 1228021200000 , 2599196.0] , [ 1230699600000 , 1924387.0] , [ 1233378000000 , 1924387.0] , [ 1235797200000 , 1924387.0] , [ 1238472000000 , 1756311.0] , [ 1241064000000 , 1756311.0] , [ 1243742400000 , 1756311.0] , [ 1246334400000 , 1743470.0] , [ 1249012800000 , 1743470.0] , [ 1251691200000 , 1743470.0] , [ 1254283200000 , 1519010.0] , [ 1256961600000 , 1519010.0] , [ 1259557200000 , 1519010.0] , [ 1262235600000 , 1591444.0] , [ 1264914000000 , 1591444.0] , [ 1267333200000 , 1591444.0] , [ 1270008000000 , 1543784.0] , [ 1272600000000 , 1543784.0] , [ 1275278400000 , 1543784.0] , [ 1277870400000 , 1309915.0] , [ 1280548800000 , 1309915.0] , [ 1283227200000 , 1309915.0] , [ 1285819200000 , 1331875.0] , [ 1288497600000 , 1331875.0] , [ 1291093200000 , 1331875.0] , [ 1293771600000 , 1331875.0] , [ 1296450000000 , 1154695.0] , [ 1298869200000 , 1154695.0] , [ 1301544000000 , 1194025.0] , [ 1304136000000 , 1194025.0] , [ 1306814400000 , 1194025.0] , [ 1309406400000 , 1194025.0] , [ 1312084800000 , 1194025.0] , [ 1314763200000 , 1244525.0] , [ 1317355200000 , 475000.0] , [ 1320033600000 , 475000.0] , [ 1322629200000 , 475000.0] , [ 1325307600000 , 690033.0] , [ 1327986000000 , 690033.0] , [ 1330491600000 , 690033.0] , [ 1333166400000 , 514733.0] , [ 1335758400000 , 514733.0]]
+  },
+  {
+    "key" : "Price",
+    "values" : [ [ 1136005200000 , 71.89] , [ 1138683600000 , 75.51] , [ 1141102800000 , 68.49] , [ 1143781200000 , 62.72] , [ 1146369600000 , 70.39] , [ 1149048000000 , 59.77] , [ 1151640000000 , 57.27] , [ 1154318400000 , 67.96] , [ 1156996800000 , 67.85] , [ 1159588800000 , 76.98] , [ 1162270800000 , 81.08] , [ 1164862800000 , 91.66] , [ 1167541200000 , 84.84] , [ 1170219600000 , 85.73] , [ 1172638800000 , 84.61] , [ 1175313600000 , 92.91] , [ 1177905600000 , 99.8] , [ 1180584000000 , 121.191] , [ 1183176000000 , 122.04] , [ 1185854400000 , 131.76] , [ 1188532800000 , 138.48] , [ 1191124800000 , 153.47] , [ 1193803200000 , 189.95] , [ 1196398800000 , 182.22] , [ 1199077200000 , 198.08] , [ 1201755600000 , 135.36] , [ 1204261200000 , 125.02] , [ 1206936000000 , 143.5] , [ 1209528000000 , 173.95] , [ 1212206400000 , 188.75] , [ 1214798400000 , 167.44] , [ 1217476800000 , 158.95] , [ 1220155200000 , 169.53] , [ 1222747200000 , 113.66] , [ 1225425600000 , 107.59] , [ 1228021200000 , 92.67] , [ 1230699600000 , 85.35] , [ 1233378000000 , 90.13] , [ 1235797200000 , 89.31] , [ 1238472000000 , 105.12] , [ 1241064000000 , 125.83] , [ 1243742400000 , 135.81] , [ 1246334400000 , 142.43] , [ 1249012800000 , 163.39] , [ 1251691200000 , 168.21] , [ 1254283200000 , 185.35] , [ 1256961600000 , 188.5] , [ 1259557200000 , 199.91] , [ 1262235600000 , 210.732] , [ 1264914000000 , 192.063] , [ 1267333200000 , 204.62] , [ 1270008000000 , 235.0] , [ 1272600000000 , 261.09] , [ 1275278400000 , 256.88] , [ 1277870400000 , 251.53] , [ 1280548800000 , 257.25] , [ 1283227200000 , 243.1] , [ 1285819200000 , 283.75] , [ 1288497600000 , 300.98] , [ 1291093200000 , 311.15] , [ 1293771600000 , 322.56] , [ 1296450000000 , 339.32] , [ 1298869200000 , 353.21] , [ 1301544000000 , 348.5075] , [ 1304136000000 , 350.13] , [ 1306814400000 , 347.83] , [ 1309406400000 , 335.67] , [ 1312084800000 , 390.48] , [ 1314763200000 , 384.83] , [ 1317355200000 , 381.32] , [ 1320033600000 , 404.78] , [ 1322629200000 , 382.2] , [ 1325307600000 , 405.0] , [ 1327986000000 , 456.48] , [ 1330491600000 , 542.44] , [ 1333166400000 , 599.55] , [ 1335758400000 , 583.98]]
   }
-
-  nv.utils.windowResize(chart.update);
- 
-  function zoomOut() {
-    zoom += .25;
-    setChartViewBox();
-  }
-
-  function zoomIn() {
-    if (zoom <= .5) return;
-    zoom -= .25;
-    setChartViewBox();
-  }
-
-    function resizeChart() {
-    var container = d3.select('#chart1');
-    var svg = container.select('svg');
-    
-  if (fitScreen) {
-      // resize based on container's width AND HEIGHT
-      var windowSize = nv.utils.windowSize();
-      svg.attr("width", windowSize.width);
-      svg.attr("height", windowSize.height);
-    } else {
-      // resize based on container's width
-      var aspect = chart.width() / chart.height();
-      var targetWidth = parseInt(container.style('width'));
-      svg.attr("width", targetWidth);
-      svg.attr("height", Math.round(targetWidth / aspect));
-    }
+]
+;*/
+  chartGen(forChartData,viewId,minMaxDateArr); 
+  
+  function debugFn(){
+  forChartFn=function(processDateData,groupByDateStr){
+  var aggreData=[];
+  var seriesDateNest=d3.nest()
+			.key(function(m){
+			return m['series']+'_'+d3.time.format(groupByDateStr)(m['date']);})
+			.rollup(function(n){
+			var sampleObj=_.clone(n[0]);
+			var sumValue=d3.sum(n, function(g) {return g.value; });
+			sampleObj['value']=sumValue;
+			aggreData.push(sampleObj);
+			}).entries(processDateData);
+var forChartData=[];
+var seriesNest=d3.nest()
+				.key(function(m){
+				return m['series'];})
+				.rollup(function(n){
+				var obj={key:n[0]['series'],values:[]};
+					var dateArr=_.pluck(n,'date');
+				dateArr=_.map(dateArr,function(u){
+				return u.getTime();
+				});
+				var valueArr=_.pluck(n,'value');
+				_.each(dateArr,function(d,i){
+				obj.values.push([d,valueArr[i]]);
+				});
+			
+				forChartData.push(obj);
+				}).entries(aggreData);
+				return forChartData;
   };
-  
-  d3.select("#chart1 svg").selectAll(".nv-point").style("pointer-events", "all").on("click", function( e )
-  { 
-   d3.selectAll("svg > *").remove();
-  
-  
-  
-  
-  
-  
-  if(countlevel == 0)
-{
-for(var key in obj) {
-if(e.series==obj[key]){
-console.log("you clicked :: " + key + " -- " + obj[key]);
-countlevel+=1; 
-var leveltwodata = _.where(levelonedata, {"CDD": key});
-leveltwodata.forEach(function(d) { unixArr=[];unixArr.push(parseInt(d.VisitedDate))});
-var group = _.groupBy(leveltwodata,function(d){return d["GRC"];});
-  console.log('group*********',JSON.stringify(group));
-  var count  = 1;
-  emptyArr =[];values=[];
-  _.each(group,function(u,t){
-  
-  values.push([parseInt(_.pluck(u,'VisitedDate')),parseInt((count*100/levelonedata.length).toFixed(2))]);
-  var  key =(_.first(_.pluck(u,'GRC')));
-  emptyArr.push( {key ,values });
-  count = count +1 ;});}
-  }}
-else{
+   minMaxDateFn=function(processDateData){
+   var unixArr=_.pluck(processDateData,'date');
+   unixArr=_.map(unixArr,function(d){
+   return d.getTime();});
+   
+   var minMaxDateArr=[new Date(_.min(unixArr)),new Date(_.max(unixArr))];
+   return minMaxDateArr;
+   };
+   xTickFn=function(minMaxDateArr) {
+   
+   };
+   chartGen=function(data,viewId,minMaxDateArr){
 
-for(var key in objlevelone) {
-   if(e.series==objlevelone[key])
-   {console.log("you clicked :: " + key + " -- " + objlevelone[key]);
-   
-   
-      var levelthreedata = _.where(levelonedata, {"GRC": String(key)});
-  levelthreedata.forEach(function(d) { unixArr=[];unixArr.push(parseInt(d.VisitedDate))});
-  console.log('levelthreedata*********',JSON.stringify(levelthreedata));
-      emptyArr=[];
-      values=[];
+ nv.addGraph(function() {
   
-  var count  = 1;
-       _.each(levelthreedata,function(d){
-  
-  values.push([parseInt (d.VisitedDate),parseInt((count*100/levelonedata.length).toFixed(2))]);
-  
-var  key =(d.Division);
- 
-  emptyArr.push( {key ,values });
-  count = count +1 ;});
-   
-   }
-  }
+ var chart = nv.models.lineWithFocusChart()
+   .margin({top: 30, right: 60, bottom: 50, left: 70})
+    .x(function(d) { return d[0] })
+    //adjusting, 100% is 1.00, not 100 as it is in the data
+    .y(function(d) { return d[1] / 100 })
+    .color(d3.scale.category10().range())
+    ;
+
+  chart.xAxis
+    .tickFormat(function(d) {
+      return d3.time.format('%x')(new Date(d))
+    });
+  chart.x2Axis
+    .tickFormat(function(d) {
+      return d3.time.format('%x')(new Date(d))
+    });
+
+  chart.yAxis.tickFormat(d3.format(',.1%'));
+
+   chart.y2Axis.tickFormat(d3.format(',.1%'));
+    d3.select('#chart_'+viewId +' svg')
+      .datum(data)
+      .transition().duration(500)
+      .call(chart)
+      ;
+ console.log("d3.select",d3.select('#chart_'+viewId));
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+});
+
+
+
+};
+
 }
- 
-  console.log('emptyArr*********',JSON.stringify(emptyArr));
-  console.log('unixArr*********',JSON.stringify(unixArr));
-   draw(emptyArr,unixArr);
-  });
-return chart;})}; 
-  
-$("#title").click(function(){
-  countlevel =0;
-  draw(emptyArr,unixArr);
-}); 
-  
+
 
 </div>
 ========
