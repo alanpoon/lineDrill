@@ -127,15 +127,15 @@
       "/elx/lib/d3.v3.js",
       "/elx/lib/nv.d3edit.js"
    ],
-   "edit-section":[
+   "edit-section":[{
+        "id":"view",
+        "name":"View"
+      },
       {
          "id":"data",
          "name":"Data"
       },
-      {
-         "id":"actionbar",
-         "name":"Actionbar"
-      },
+      
       {
          "id":"LineDrill",
          "name":"LineDrill"
