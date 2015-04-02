@@ -6564,13 +6564,13 @@ nv.models.lineWithFocusChart = function() {
           .attr('class', 'left')
           .attr('x', 0)
           .attr('y', 0)
-          .attr('height', availableHeight2);
+          .attr('height', availableHeight2).attr('fill','white').attr('opacity',0.5);
 
       brushBGenter.append('rect')
           .attr('class', 'right')
           .attr('x', 0)
           .attr('y', 0)
-          .attr('height', availableHeight2);
+          .attr('height', availableHeight2).attr('fill','white').attr('opacity',0.5);
 
       var gBrush = g.select('.nv-x.nv-brush')
           .call(brush);

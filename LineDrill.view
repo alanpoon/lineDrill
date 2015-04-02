@@ -1,113 +1,148 @@
 <<<<<<<=view-json=
 {
-  "id":"LineDrill",
-  "name":"LineDrill",
-  "category":"general",
-  "default":{
-    "jsonClass":"View",
-    "elxType":"View",
-    "vtype":"bundle",
-    "state":"visible",
-    "isContainer":false,
-    "position":{
-      "jsonClass":"Position",
-      "elxType":"Position",
-      "height":"600",
-      "width":"800",
-      "zIndex":"auto"
-    },
-    "data":{
-      "jsonClass":"DataEmbedded",
-      "datasource":{
-        "jsonClass":"DataSource",
-        "name":"initData",
-        "stype":"Data",
-        "desc":"default data",
-        "schema":{
-          "jsonClass":"Schema",
-          "caseSensitive":false,
-          "columns":[{
-            "jsonClass":"SchemaColumn",
-            "name":"cdd_name",
-            "dtype":"String",
-            "attrs":[]
-          },{
-            "jsonClass":"SchemaColumn",
-            "name":"cs_name",
-            "dtype":"String",
-            "attrs":[]
-          },{
-            "jsonClass":"SchemaColumn",
-            "name":"div_name",
-            "dtype":"String",
-            "attrs":[]
-          },{
-            "jsonClass":"SchemaColumn",
-            "name":"visited_date",
-            "dtype":"String",
-            "attrs":[]
-          },{
-            "jsonClass":"SchemaColumn",
-            "name":"hv_description",
-            "dtype":"String",
-            "attrs":[]
-          }]
-        },
-        "data":{
-          "jsonClass":"DataRecords",
-          "records":[{
-            "jsonClass":"Record",
-            "fields":[{
-              "jsonClass":"Field",
-              "value":"North East CDC"
-            },{
-              "jsonClass":"Field",
-              "value":"Aljunied GRC"
-            },{
-              "jsonClass":"Field",
-              "value":"Bedok Reservoir-Punggol"
-            },{
-              "jsonClass":"Field",
-              "value":"2014-11-22"
-            },{
-              "jsonClass":"Field",
-              "value":"Visited"
-            }]
-          }]
-        }
+   "id":"LineDrill",
+   "name":"LineDrill",
+   "category":"general",
+   "default":{
+      "jsonClass":"View",
+      "elxType":"View",
+      "vtype":"bundle",
+      "state":"visible",
+      "isContainer":false,
+      "position":{
+         "jsonClass":"Position",
+         "elxType":"Position",
+         "height":"600",
+         "width":"800",
+         "zIndex":"auto"
       },
-      "directive":""
-    },
-    "typeinfo":{
-      "jsonClass":"Bundle",
-      "type":"LineDrill",
       "data":{
-        "cdd_nameCol":"cdd_name",
-        "cs_nameCol":"cs_name",
-        "div_nameCol":"div_name",
-        "visited_dateCol":"visited_date",
-      
-        "hv_descriptionCol":"hv_description"
+         "jsonClass":"DataEmbedded",
+         "datasource":{
+            "jsonClass":"DataSource",
+            "name":"initData",
+            "stype":"Data",
+            "desc":"default data",
+            "schema":{
+               "jsonClass":"Schema",
+               "caseSensitive":false,
+               "columns":[
+                  {
+                     "jsonClass":"SchemaColumn",
+                     "name":"FYEAR",
+                     "dtype":"String",
+                     "attrs":[
+
+                     ]
+                  },
+                  {
+                     "jsonClass":"SchemaColumn",
+                     "name":"Gross Profit",
+                     "dtype":"Double",
+                     "attrs":[
+
+                     ]
+                  },
+                  {
+                     "jsonClass":"SchemaColumn",
+                     "name":"Sales ($)",
+                     "dtype":"Double",
+                     "attrs":[
+
+                     ]
+                  }
+               ]
+            },
+            "data":{
+               "jsonClass":"DataRecords",
+               "records":[
+                  {
+                     "jsonClass":"Record",
+                     "fields":[
+                        {
+                           "jsonClass":"Field",
+                           "value":"2014-11-22"
+                        },
+                        {
+                           "jsonClass":"Field",
+                           "value":800
+                        },
+                        {
+                           "jsonClass":"Field",
+                           "value":700
+                        }
+                     ]
+                  }
+               ]
+            }
+         },
+		  "hint":"directive-data-array",
+         "directive":"ZnVuY3Rpb24gZGF0YSgpew0KDQogIHZhciBmWWVhcj12aWV3LnR5cGVpbmZvLmRhdGEuZmllbGRzLmZZZWFyOw0KIA0KICB2YXIgdD12aWV3LnR5cGVpbmZvLmRhdGEuZmllbGRzLm9wZXJhYmxlLnZhbHVlczsgDQogIA0KICB2YXIgY29sdW1ucz1bXTsgdmFyIG9wZXJhdGlvbnM9W107IHZhciBrZXlzPVtdOw0KIA0KCWZZZWFyLmZvckVhY2goZnVuY3Rpb24oZCxpKSB7DQogIGtleXMucHVzaChkLm5hbWUpOw0KICAgICB9KQ0KDQoNCiAgICB0LmZvckVhY2goZnVuY3Rpb24oZCxpKSB7DQogIGNvbHVtbnMucHVzaChkLm5hbWUpOw0KICAgIG9wZXJhdGlvbnMucHVzaChkLm9wKTsNCiAgfSkNCiANCiAgICAgcmV0dXJuIHJvd3MuZ3JvdXBCeShrZXlzLGNvbHVtbnMsb3BlcmF0aW9ucyk7DQp9DQpkYXRhKCk7="
+      },
+      "typeinfo":{
+         "jsonClass":"Bundle",
+         "type":"LineDrill",
+         "data":{
+            "series":{
+               "sort":"series-asc"
+            },
+            "keys":{
+               "sort":"key-asc"
+            },
+            "fields":{
+               "fYear":[
+                  {
+                     "name":"FYEAR",
+                     "id":"|"
+                  }
+               ],
+            
+               "operable":{
+                  "values":[
+                     {
+                        "id":"Gross P2",
+                        "name":"Gross Profit",
+                        "op":"sum"
+                     },
+                     {
+                        "id":"Sales ($)",
+                        "name":"Sales ($)",
+                        "op":"sum"
+                     }
+                  ]
+               }
+            }
+         },
+        "groupByDateStr":"%d-%m-%Y",
+        "xAxisLabel":"xAxis",
+        "yAxisLabel":"yAxis",
+        "xTicksFormatCast":"xTicksFormat=function(d){return d3.time.format('%x')(d);}",
+        "yTicksFormatCast":"yTicksFormat=function(d){return d3.round(d,2);}"
+
       }
-    }
-  },
-  "includes":["/elx/lib/d3.v3.js","/elx/lib/nv.d3.js"],
-  "edit-section":[{
-    "id":"data",
-    "name":"Data"
-  },{
-    "id":"view",
-    "name":"View"
-  },{
-    "id":"actionbar",
-    "name":"Actionbar"
-  },{
-    "id":"LineDrill",
-    "name":"LineDrill"
-  },{
-    "id":"filters",
-    "name":"Filters"
-  }]
+   },
+   "includes":[
+      "/elx/lib/d3.v3.js",
+      "/elx/lib/nv.d3edit.js"
+   ],
+   "edit-section":[
+      {
+         "id":"data",
+         "name":"Data"
+      },
+      {
+         "id":"actionbar",
+         "name":"Actionbar"
+      },
+      {
+         "id":"LineDrill",
+         "name":"LineDrill"
+      },
+      {
+         "id":"filters",
+         "name":"Filters"
+      }
+   ]
 }
 ========
 <<<<<<<=edit-json=
@@ -160,234 +195,111 @@
     "jsonClass":"Row",
     "cols":[{
       "jsonClass":"Label",
-      "id":"typeinfo-cdd_nameCol-label",
+      "id":"typeinfo-fYearCol-label",
       "type":"label",
-      "text":"cdd_name Column"
+      "text":"Date"
     },{
       "jsonClass":"SchemaColumnSelect",
-      "id":"typeinfo-cdd_nameCol",
+      "id":"typeinfo-fYearCol",
       "type":"select-schema-column",
-      "value":"${typeinfo.cdd_nameCol}"
+      "value":"${typeinfo.fYearCol}"
     }]
   },{
     "jsonClass":"Row",
     "cols":[{
       "jsonClass":"Label",
-      "id":"typeinfo-div_nameCol-label",
+      "id":"typeinfo-groupByDateStr-label",
       "type":"label",
-      "text":"div_name Column"
-    },{
-      "jsonClass":"SchemaColumnSelect",
-      "id":"typeinfo-div_nameCol",
-      "type":"select-schema-column",
-      "value":"${typeinfo.div_nameCol}"
-    }]
-  },{
-    "jsonClass":"Row",
-    "cols":[{
-      "jsonClass":"Label",
-      "id":"typeinfo-cs_nameCol-label",
-      "type":"label",
-      "text":"cs_name Column"
-    },{
-      "jsonClass":"SchemaColumnSelect",
-      "id":"typeinfo-cs_nameCol",
-      "type":"select-schema-column",
-      "value":"${typeinfo.cs_nameCol}"
-    }]
-  },{
-    "jsonClass":"Row",
-    "cols":[{
-      "jsonClass":"Label",
-      "id":"typeinfo-YearCol-label",
-      "type":"label",
-      "text":"Year Column"
-    },{
-      "jsonClass":"SchemaColumnSelect",
-      "id":"typeinfo-YearCol",
-      "type":"select-schema-column",
-      "value":"${typeinfo.YearCol}"
-    }]
-  },{
-    "jsonClass":"Row",
-    "cols":[{
-      "jsonClass":"Label",
-      "id":"typeinfo-MonthCol-label",
-      "type":"label",
-      "text":"Month Column"
-    },{
-      "jsonClass":"SchemaColumnSelect",
-      "id":"typeinfo-MonthCol",
-      "type":"select-schema-column",
-      "value":"${typeinfo.MonthCol}"
-    }]
-  },{
-    "jsonClass":"Row",
-    "cols":[{
-      "jsonClass":"Label",
-      "id":"typeinfo-hv_descriptionCol-label",
-      "type":"label",
-      "text":"hv_description Column"
-    },{
-      "jsonClass":"SchemaColumnSelect",
-      "id":"typeinfo-hv_descriptionCol",
-      "type":"select-schema-column",
-      "value":"${typeinfo.hv_descriptionCol}"
-    }]
-  },{
-    "jsonClass":"Row",
-    "cols":[{
-      "jsonClass":"Label",
-      "id":"typeinfo-visited_dateCol-label",
-      "type":"label",
-      "text":"visited_date Column"
-    },{
-      "jsonClass":"SchemaColumnSelect",
-      "id":"typeinfo-visited_dateCol",
-      "type":"select-schema-column",
-      "value":"${typeinfo.visited_dateCol}"
-    }]
-  },{
-    "jsonClass":"Row",
-    "cols":[{
-      "jsonClass":"Label",
-      "id":"typeinfo-title-label",
-      "type":"label",
-      "text":"Title"
+      "text":"d3 time format parse String"
     },{
       "jsonClass":"Field",
-      "id":"typeinfo-title",
+      "id":"typeinfo-groupByDateStr",
       "type":"field",
-      "value":"${typeinfo.title}",
+      "value":"${typeinfo.groupByDateStr}",
+      "readonly":false
+    }]
+  },{
+      "jsonClass":"Row",
+      "cols":[{
+        "jsonClass":"Label",
+        "id":"typeinfo-data-fields-operable-values-label",
+        "type":"label",
+        "text":"Column"
+      },{
+        "jsonClass":"Div",
+        "id":"typeinfo-data-fields-operable-values"
+      }]
+    },{
+    "jsonClass":"Row",
+    "cols":[{
+      "jsonClass":"Label",
+      "id":"typeinfo-xAxisLabel-label",
+      "type":"label",
+      "text":"X Axis Label"
+    },{
+      "jsonClass":"Field",
+      "id":"typeinfo-xAxisLabel",
+      "type":"field",
+      "value":"${typeinfo.xAxisLabel}",
       "readonly":false
     }]
   },{
     "jsonClass":"Row",
     "cols":[{
       "jsonClass":"Label",
-      "id":"typeinfo-subtitle-label",
+      "id":"typeinfo-yAxisLabel-label",
       "type":"label",
-      "text":"Subtitle"
+      "text":"Y Axis Label"
     },{
       "jsonClass":"Field",
-      "id":"typeinfo-subtitle",
+      "id":"typeinfo-yAxisLabel",
       "type":"field",
-      "value":"${typeinfo.subtitle}",
+      "value":"${typeinfo.yAxisLabel}",
       "readonly":false
     }]
   },{
     "jsonClass":"Row",
     "cols":[{
       "jsonClass":"Label",
-      "id":"typeinfo-yaxisbar-label",
+      "id":"typeinfo-xTicksFormatCast-label",
       "type":"label",
-      "text":"Yaxis Bar name"
+      "text":"Format X Ticks"
     },{
       "jsonClass":"Field",
-      "id":"typeinfo-yaxisbar",
+      "id":"typeinfo-xTicksFormatCast",
       "type":"field",
-      "value":"${typeinfo.yaxisbar}",
+      "value":"${typeinfo.xTicksFormatCast}",
       "readonly":false
     }]
   },{
     "jsonClass":"Row",
     "cols":[{
       "jsonClass":"Label",
-      "id":"typeinfo-yaxisline-label",
+      "id":"typeinfo-yTicksFormatCast-label",
       "type":"label",
-      "text":"Yaxis Line name"
+      "text":"Format Y Ticks"
     },{
       "jsonClass":"Field",
-      "id":"typeinfo-yaxisline",
+      "id":"typeinfo-yTicksFormatCast",
       "type":"field",
-      "value":"${typeinfo.yaxisline}",
-      "readonly":false
-    }]
-  },{
-    "jsonClass":"Row",
-    "cols":[{
-      "jsonClass":"Label",
-      "id":"typeinfo-marginL-label",
-      "type":"label",
-      "text":"Left margin"
-    },{
-      "jsonClass":"Field",
-      "id":"typeinfo-marginL",
-      "type":"field",
-      "value":"${typeinfo.marginL}",
-      "readonly":false
-    }]
-  },{
-    "jsonClass":"Row",
-    "cols":[{
-      "jsonClass":"Label",
-      "id":"typeinfo-marginR-label",
-      "type":"label",
-      "text":"Right margin"
-    },{
-      "jsonClass":"Field",
-      "id":"typeinfo-marginR",
-      "type":"field",
-      "value":"${typeinfo.marginR}",
-      "readonly":false
-    }]
-  },{
-    "jsonClass":"Row",
-    "cols":[{
-      "jsonClass":"Label",
-      "id":"typeinfo-marginT-label",
-      "type":"label",
-      "text":"Top margin"
-    },{
-      "jsonClass":"Field",
-      "id":"typeinfo-marginT",
-      "type":"field",
-      "value":"${typeinfo.marginT}",
-      "readonly":false
-    }]
-  },{
-    "jsonClass":"Row",
-    "cols":[{
-      "jsonClass":"Label",
-      "id":"typeinfo-marginB-label",
-      "type":"label",
-      "text":"Bottom margin"
-    },{
-      "jsonClass":"Field",
-      "id":"typeinfo-marginB",
-      "type":"field",
-      "value":"${typeinfo.marginB}",
+      "value":"${typeinfo.yTicksFormatCast}",
       "readonly":false
     }]
   }]
 }
 ========
 <<<<<<<=edit-js=
-elx.bundle.type.column_basicTran = {
+elx.bundle.type.LineDrill = {
 
   	init : function(view) {
-      
-		$("#typeinfo-chartHeight").val(view.typeinfo.chart.height);
-      	$("#typeinfo-chartWidth").val(view.typeinfo.chart.width);
-      $("#typeinfo-chartCentre").val(view.typeinfo.chart.centre);
-      $("#typeinfo-title").val(view.typeinfo.chart.text.title);
-      $("#typeinfo-subtitle").val(view.typeinfo.chart.text.subtitle);
-      $("#typeinfo-yaxisbar").val(view.typeinfo.chart.text.yaxisbar);
-      $("#typeinfo-yaxisline").val(view.typeinfo.chart.text.yaxisline);
-      
-      	$("#typeinfo-marginR").val(view.typeinfo.chart.margin.r);
-      	$("#typeinfo-marginL").val(view.typeinfo.chart.margin.l);
-      	$("#typeinfo-marginT").val(view.typeinfo.chart.margin.t);
-      	$("#typeinfo-marginB").val(view.typeinfo.chart.margin.b);
-      
-      
-      $("#typeinfo-cdd_nameCol").val(view.typeinfo.data.cdd_nameCol);
-      $("#typeinfo-cs_nameCol").val(view.typeinfo.data.cs_nameCol);
-      $("#typeinfo-div_nameCol").val(view.typeinfo.data.div_nameCol);
-      $("#typeinfo-visited_dateCol").val(view.typeinfo.data.visited_dateCol);
-      $("#typeinfo-hv_descriptionCol").val(view.typeinfo.data.hv_descriptionCol);
-      $("#typeinfo-YearCol").val(view.typeinfo.data.YearCol);
-      $("#typeinfo-MonthCol").val(view.typeinfo.data.MonthCol)
+       var dataOps =  elx.utils.getElxChartOperablesData(view, view.typeinfo.data.fields.operable.values);
+   		var tableOp = new elx.MultiChartValueColumnSection("typeinfo-data-fields-operable-values-table",
+                                                        "typeinfo-data-fields-operable-values", view, dataOps);
+		$("#typeinfo-data-fields-operable-values-table").data("table",tableOp);
+      elx.host.utils.initSectionGroups(view,$("#LineDrill-div"));
+        $("#typeinfo-fYearCol").val(view.typeinfo.data.fields.fYear[0].name);
+    
+	
 	},
 
 	validate : function(view) {
@@ -395,119 +307,211 @@ elx.bundle.type.column_basicTran = {
 	},
 
 	save : function(view) {
-		var cHeight = $("#typeinfo-chartHeight").val();
-		view.typeinfo.chart.height = cHeight;
-      	var cWidth = $("#typeinfo-chartWidth").val();
-		view.typeinfo.chart.width = cWidth;
-      var cCentre = $("#typeinfo-chartCentre").val();
-		view.typeinfo.chart.centre = cCentre;
-      
-      
-      var cdd_nameCol = $("#typeinfo-cdd_nameCol").val();
-      	view.typeinfo.data.cdd_nameCol = cdd_nameCol;
-      
-      var cs_nameCol = $("#typeinfo-cs_nameCol").val();
-      	view.typeinfo.data.cs_nameCol = cs_nameCol;
-      
-      var div_nameCol = $("#typeinfo-div_nameCol").val();
-      	view.typeinfo.data.div_nameCol = div_nameCol;
-      
-      var visited_dateCol = $("#typeinfo-visited_dateCol").val();
-      	view.typeinfo.data.visited_dateCol = visited_dateCol;
-      
-      var hv_descriptionCol = $("#typeinfo-hv_descriptionCol").val();
-      	view.typeinfo.data.hv_descriptionCol = hv_descriptionCol;
-      
-      var YearCol = $("#typeinfo-YearCol").val();
-      	view.typeinfo.data.YearCol = YearCol;
-      
-      var MonthCol = $("#typeinfo-MonthCol").val();
-      	view.typeinfo.data.MonthCol = MonthCol;
-           
-      var cTitle = $("#typeinfo-title").val();
-      	view.typeinfo.chart.text.title = cTitle;
-      var cSubtitle = $("#typeinfo-subtitle").val();
-      	view.typeinfo.chart.text.subtitle = cSubtitle;
-       var cYaxisbar = $("#typeinfo-yaxisbar").val();
-      	view.typeinfo.chart.text.yaxisbar = cYaxisbar;
-       var cYaxisline = $("#typeinfo-yaxisline").val();
-      	view.typeinfo.chart.text.yaxisline = cYaxisline;
-      	var mLeft =$("#typeinfo-marginL").val();
-    	view.typeinfo.chart.margin.l=mLeft;
-      
-      	var mRight = $("#typeinfo-marginR").val();
-      	view.typeinfo.chart.margin.r=mRight;
-      
-      	var mBottom = $("#typeinfo-marginL").val();
-      	view.typeinfo.chart.margin.l=mBottom;
-      	var mTop = $("#typeinfo-marginT").val();
-      	view.typeinfo.chart.margin.t=mTop;
+		var dataTableOp = $("#typeinfo-data-fields-operable-values-table").data("table");
+       var dataOp = dataTableOp.table.getData();
+          view.typeinfo.data.fields.operable.values = 
+          elx.utils.buildElxChartOperablesData(view.typeinfo.data.fields.operable.values,dataOp);
+      	elx.host.utils.saveProperties(view.typeinfo);
+   	var dfYear = $("#typeinfo-fYearCol").val();
+		view.typeinfo.data.fields.fYear[0].name = dfYear;
+ 
+         
     }
 	
 }
 ========
 <<<<<<<=view-html=
 <style>
-body{overflow-y:scroll}text{font:12px sans-serif}svg{display:block}.chartWrap{margin:0;padding:0;overflow:hidden}.nvtooltip{position:absolute;background-color:rgba(255,255,255,1.0);padding:1px;border:1px solid rgba(0,0,0,.2);z-index:10000;font-family:Arial;font-size:13px;text-align:left;pointer-events:none;white-space:nowrap;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.nvtooltip.with-transitions,.with-transitions .nvtooltip{transition:opacity 250ms linear;-moz-transition:opacity 250ms linear;-webkit-transition:opacity 250ms linear;transition-delay:250ms;-moz-transition-delay:250ms;-webkit-transition-delay:250ms}.nvtooltip.x-nvtooltip,.nvtooltip.y-nvtooltip{padding:8px}.nvtooltip h3{margin:0;padding:4px 14px;line-height:18px;font-weight:400;background-color:rgba(247,247,247,0.75);text-align:center;border-bottom:1px solid #ebebeb;-webkit-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0;border-radius:5px 5px 0 0}.nvtooltip p{margin:0;padding:5px 14px;text-align:center}.nvtooltip span{display:inline-block;margin:2px 0}.nvtooltip table{margin:6px;border-spacing:0}.nvtooltip table td{padding:2px 9px 2px 0;vertical-align:middle}.nvtooltip table td.key{font-weight:400}.nvtooltip table td.value{text-align:right;font-weight:700}.nvtooltip table tr.highlight td{padding:1px 9px 1px 0;border-bottom-style:solid;border-bottom-width:1px;border-top-style:solid;border-top-width:1px}.nvtooltip table td.legend-color-guide div{width:8px;height:8px;vertical-align:middle}.nvtooltip .footer{padding:3px;text-align:center}.nvtooltip-pending-removal{position:absolute;pointer-events:none}svg{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:block;width:100%;height:100%}svg text{font:normal 12px Arial}svg .title{font:bold 14px Arial}.nvd3 .nv-background{fill:#fff;fill-opacity:0}.nvd3.nv-noData{font-size:18px;font-weight:700}.nv-brush .extent{fill-opacity:.125;shape-rendering:crispEdges}.nvd3 .nv-legend .nv-series{cursor:pointer}.nvd3 .nv-legend .disabled circle{fill-opacity:0}.nvd3 .nv-axis{pointer-events:none}.nvd3 .nv-axis path{fill:none;stroke:#000;stroke-opacity:.75;shape-rendering:crispEdges}.nvd3 .nv-axis path.domain{stroke-opacity:.75}.nvd3 .nv-axis.nv-x path.domain{stroke-opacity:0}.nvd3 .nv-axis line{fill:none;stroke:#e5e5e5;shape-rendering:crispEdges}.nvd3 .nv-axis .zero line,/*this selector may not be necessary*/ .nvd3 .nv-axis line.zero{stroke-opacity:.75}.nvd3 .nv-axis .nv-axisMaxMin text{font-weight:700}.nvd3 .x .nv-axis .nv-axisMaxMin text,.nvd3 .x2 .nv-axis .nv-axisMaxMin text,.nvd3 .x3 .nv-axis .nv-axisMaxMin text{text-anchor:middle}.nv-brush .resize path{fill:#eee;stroke:#666}.nvd3 .nv-groups path.nv-line{fill:none;stroke-width:1.5px}.nvd3 .nv-groups path.nv-line.nv-thin-line{stroke-width:1px}.nvd3 .nv-groups path.nv-area{stroke:none}.nvd3 .nv-line.hover path{stroke-width:6px}.nvd3.nv-line .nvd3.nv-scatter .nv-groups .nv-point{fill-opacity:0;stroke-opacity:0}.nvd3.nv-scatter.nv-single-point .nv-groups .nv-point{fill-opacity:.5!important;stroke-opacity:.5!important}.with-transitions .nvd3 .nv-groups .nv-point{transition:stroke-width 250ms linear,stroke-opacity 250ms linear;-moz-transition:stroke-width 250ms linear,stroke-opacity 250ms linear;-webkit-transition:stroke-width 250ms linear,stroke-opacity 250ms linear}.nvd3.nv-scatter .nv-groups .nv-point.hover,.nvd3 .nv-groups .nv-point.hover{stroke-width:7px;fill-opacity:.95!important;stroke-opacity:.95!important}.nvd3 .nv-point-paths path{stroke:#aaa;stroke-opacity:0;fill:#eee;fill-opacity:0}.nvd3 .nv-indexLine{cursor:ew-resize}.nvd3 .nv-distribution{pointer-events:none}.nvd3 .nv-interactiveGuideLine{pointer-events:none}.nvd3 line.nv-guideline{stroke:#ccc}
+text{font:12px sans-serif}svg{display:block}.chartWrap{margin:0;padding:0;overflow:hidden}.nvtooltip{position:absolute;background-color:rgba(255,255,255,1.0);padding:1px;border:1px solid rgba(0,0,0,.2);z-index:10000;font-family:Arial;font-size:13px;text-align:left;pointer-events:none;white-space:nowrap;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.nvtooltip.with-transitions,.with-transitions .nvtooltip{transition:opacity 250ms linear;-moz-transition:opacity 250ms linear;-webkit-transition:opacity 250ms linear;transition-delay:250ms;-moz-transition-delay:250ms;-webkit-transition-delay:250ms}.nvtooltip.x-nvtooltip,.nvtooltip.y-nvtooltip{padding:8px}.nvtooltip h3{margin:0;padding:4px 14px;line-height:18px;font-weight:400;background-color:rgba(247,247,247,0.75);text-align:center;border-bottom:1px solid #ebebeb;-webkit-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0;border-radius:5px 5px 0 0}.nvtooltip p{margin:0;padding:5px 14px;text-align:center}.nvtooltip span{display:inline-block;margin:2px 0}.nvtooltip table{margin:6px;border-spacing:0}.nvtooltip table td{padding:2px 9px 2px 0;vertical-align:middle}.nvtooltip table td.key{font-weight:400}.nvtooltip table td.value{text-align:right;font-weight:700}.nvtooltip table tr.highlight td{padding:1px 9px 1px 0;border-bottom-style:solid;border-bottom-width:1px;border-top-style:solid;border-top-width:1px}.nvtooltip table td.legend-color-guide div{width:8px;height:8px;vertical-align:middle}.nvtooltip .footer{padding:3px;text-align:center}.nvtooltip-pending-removal{position:absolute;pointer-events:none}svg{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:block;width:100%;height:100%}svg text{font:normal 12px Arial}svg .title{font:bold 14px Arial}.nvd3 .nv-background{fill:#fff;fill-opacity:0}.nvd3.nv-noData{font-size:18px;font-weight:700}.nv-brush .extent{fill-opacity:.125;shape-rendering:crispEdges}.nvd3 .nv-legend .nv-series{cursor:pointer}.nvd3 .nv-legend .disabled circle{fill-opacity:0}.nvd3 .nv-axis{pointer-events:none}.nvd3 .nv-axis path{fill:none;stroke:#000;stroke-opacity:.75;shape-rendering:crispEdges}.nvd3 .nv-axis path.domain{stroke-opacity:.75}.nvd3 .nv-axis.nv-x path.domain{stroke-opacity:0}.nvd3 .nv-axis line{fill:none;stroke:#e5e5e5;shape-rendering:crispEdges}.nvd3 .nv-axis .zero line,/*this selector may not be necessary*/ .nvd3 .nv-axis line.zero{stroke-opacity:.75}.nvd3 .nv-axis .nv-axisMaxMin text{font-weight:700}.nvd3 .x .nv-axis .nv-axisMaxMin text,.nvd3 .x2 .nv-axis .nv-axisMaxMin text,.nvd3 .x3 .nv-axis .nv-axisMaxMin text{text-anchor:middle}.nv-brush .resize path{fill:#eee;stroke:#666}.nvd3 .nv-groups path.nv-line{fill:none;stroke-width:1.5px}.nvd3 .nv-groups path.nv-line.nv-thin-line{stroke-width:1px}.nvd3 .nv-groups path.nv-area{stroke:none}.nvd3 .nv-line.hover path{stroke-width:6px}.nvd3.nv-line .nvd3.nv-scatter .nv-groups .nv-point{fill-opacity:0;stroke-opacity:0}.nvd3.nv-scatter.nv-single-point .nv-groups .nv-point{fill-opacity:.5!important;stroke-opacity:.5!important}.with-transitions .nvd3 .nv-groups .nv-point{transition:stroke-width 250ms linear,stroke-opacity 250ms linear;-moz-transition:stroke-width 250ms linear,stroke-opacity 250ms linear;-webkit-transition:stroke-width 250ms linear,stroke-opacity 250ms linear}.nvd3.nv-scatter .nv-groups .nv-point.hover,.nvd3 .nv-groups .nv-point.hover{stroke-width:7px;fill-opacity:.95!important;stroke-opacity:.95!important}.nvd3 .nv-point-paths path{stroke:#aaa;stroke-opacity:0;fill:#eee;fill-opacity:0}.nvd3 .nv-indexLine{cursor:ew-resize}.nvd3 .nv-distribution{pointer-events:none}.nvd3 .nv-interactiveGuideLine{pointer-events:none}.nvd3 line.nv-guideline{stroke:#ccc}
 
 </style>
 
 
-  <div id="chart_preview" class='with-transitions'>       
+<div id="chart_${id}" class='with-transitions'>       
     <svg style='height:500px;width:600px'></svg>
       
   </div>
 
 <div class='elx-script'>
 
- var viewId='preview';
-
- var rawdata =${data};
-  var rawdata=[  
-  ["Bedok Reservoir-Punggol","2014-11-22",25 ],
-  ["Bedok Reservoir-Punggol","2014-11-23",35 ],
-  ["Bedok Reservoir-Punggol","2014-11-24",70  ],
-  ["Bedok Reservoir-Punggol","2014-11-25",96 ],
-  ["Bedok Reservoir-Punggol","2014-11-26",20 ],
-  ["Bedok Reservoir-Punggol","2014-11-27",14 ],
-  ["Bedok Reservoir-Punggol","2014-11-29",60  ], 
-  ["Tampines","2014-11-22",10 ],
-  ["Tampines","2014-11-23",50],
-  ["Tampines","2014-11-24",50  ],
-  ["Tampines","2014-11-25",50 ],
-  ["Tampines","2014-11-26",70 ],
-  ["Tampines","2014-11-27",70 ],
-  ["Tampines","2014-11-29",70  ]
+ var viewId=view.id;
+  var xTicksFormat,yTicksFormat;
+  eval(view.typeinfo.xTicksFormatCast);
+  eval(view.typeinfo.yTicksFormatCast);
+  var options={xAxisLabel:view.typeinfo.xAxisLabel,yAxisLabel:view.typeinfo.yAxisLabel,
+  xTicksFormat:xTicksFormat,yTicksFormat:yTicksFormat};
+  var groupByDateStr=view.typeinfo.groupByDateStr;
+  
+  console.log('options',JSON.stringify(options));
+   if (view.data.jsonClass === "DataEmbedded"){
+  var rawData=[  
+  ["2014-11-22",25,35],
+  ["2014-11-23",35,70],
+  ["2014-11-24",70,100],
+  ["2014-11-25",96,100],
+  ["2014-11-26",20,100],
+  ["2014-11-27",14,100],
+  ["2014-11-29",60,100], 
+  
 ];
-  var chartGen,minMaxDateFn,forChartFn;
+  } else rawData=${data};
+ 
+  var chartGen,minMaxDateFn,forChartFn,getArr,hexToModel1,arrToHex,cutTableName;
   debugFn();
-  var rawdata=_.map(rawdata,function(d){
-  return {series:d[0],date:d[1],value:d[2]};
-  });
+  var f=view.typeinfo.data.fields;
+   var data1=arrToHex(rawData,f,view);
+    var legendKey='allGroupby';
+  var data2noNeedValueOp=hexToModel1(data1,legendKey,'noNeedValueOp');
+  console.log('data2noNeedValueOp:',JSON.stringify(data2noNeedValueOp));
+  
   var parseDateStr="%Y-%m-%d";
   
-  var processDateData=_.map(rawdata,function(d){
-  return {'series':d.series, 'date':d3.time.format(parseDateStr).parse(d.date),'value':d.value};
+  var processDateData=_.map(data2noNeedValueOp,function(d){
+  return {'series':d.RATIOTYPE, 'date':d3.time.format(parseDateStr).parse(d.FYEAR),'value':d.RATIOVALUE};
   });
   var groupByDateStr="%d-%m-%Y";
   var forChartData=forChartFn(processDateData,groupByDateStr);
  console.log('forChartData', JSON.stringify(forChartData));
 var minMaxDateArr=minMaxDateFn(processDateData);
 console.log("minMaxDateArr",minMaxDateArr);
-/*forChartData=[
-  {
-    "key" : "Quantity",
-    "values" : [ [ 1136005200000 , 1271000.0] , [ 1138683600000 , 1271000.0] , [ 1141102800000 , 1271000.0] , [ 1143781200000 , 0] , [ 1146369600000 , 0] , [ 1149048000000 , 0] , [ 1151640000000 , 0] , [ 1154318400000 , 0] , [ 1156996800000 , 0] , [ 1159588800000 , 3899486.0] , [ 1162270800000 , 3899486.0] , [ 1164862800000 , 3899486.0] , [ 1167541200000 , 3564700.0] , [ 1170219600000 , 3564700.0] , [ 1172638800000 , 3564700.0] , [ 1175313600000 , 2648493.0] , [ 1177905600000 , 2648493.0] , [ 1180584000000 , 2648493.0] , [ 1183176000000 , 2522993.0] , [ 1185854400000 , 2522993.0] , [ 1188532800000 , 2522993.0] , [ 1191124800000 , 2906501.0] , [ 1193803200000 , 2906501.0] , [ 1196398800000 , 2906501.0] , [ 1199077200000 , 2206761.0] , [ 1201755600000 , 2206761.0] , [ 1204261200000 , 2206761.0] , [ 1206936000000 , 2287726.0] , [ 1209528000000 , 2287726.0] , [ 1212206400000 , 2287726.0] , [ 1214798400000 , 2732646.0] , [ 1217476800000 , 2732646.0] , [ 1220155200000 , 2732646.0] , [ 1222747200000 , 2599196.0] , [ 1225425600000 , 2599196.0] , [ 1228021200000 , 2599196.0] , [ 1230699600000 , 1924387.0] , [ 1233378000000 , 1924387.0] , [ 1235797200000 , 1924387.0] , [ 1238472000000 , 1756311.0] , [ 1241064000000 , 1756311.0] , [ 1243742400000 , 1756311.0] , [ 1246334400000 , 1743470.0] , [ 1249012800000 , 1743470.0] , [ 1251691200000 , 1743470.0] , [ 1254283200000 , 1519010.0] , [ 1256961600000 , 1519010.0] , [ 1259557200000 , 1519010.0] , [ 1262235600000 , 1591444.0] , [ 1264914000000 , 1591444.0] , [ 1267333200000 , 1591444.0] , [ 1270008000000 , 1543784.0] , [ 1272600000000 , 1543784.0] , [ 1275278400000 , 1543784.0] , [ 1277870400000 , 1309915.0] , [ 1280548800000 , 1309915.0] , [ 1283227200000 , 1309915.0] , [ 1285819200000 , 1331875.0] , [ 1288497600000 , 1331875.0] , [ 1291093200000 , 1331875.0] , [ 1293771600000 , 1331875.0] , [ 1296450000000 , 1154695.0] , [ 1298869200000 , 1154695.0] , [ 1301544000000 , 1194025.0] , [ 1304136000000 , 1194025.0] , [ 1306814400000 , 1194025.0] , [ 1309406400000 , 1194025.0] , [ 1312084800000 , 1194025.0] , [ 1314763200000 , 1244525.0] , [ 1317355200000 , 475000.0] , [ 1320033600000 , 475000.0] , [ 1322629200000 , 475000.0] , [ 1325307600000 , 690033.0] , [ 1327986000000 , 690033.0] , [ 1330491600000 , 690033.0] , [ 1333166400000 , 514733.0] , [ 1335758400000 , 514733.0]]
-  },
-  {
-    "key" : "Price",
-    "values" : [ [ 1136005200000 , 71.89] , [ 1138683600000 , 75.51] , [ 1141102800000 , 68.49] , [ 1143781200000 , 62.72] , [ 1146369600000 , 70.39] , [ 1149048000000 , 59.77] , [ 1151640000000 , 57.27] , [ 1154318400000 , 67.96] , [ 1156996800000 , 67.85] , [ 1159588800000 , 76.98] , [ 1162270800000 , 81.08] , [ 1164862800000 , 91.66] , [ 1167541200000 , 84.84] , [ 1170219600000 , 85.73] , [ 1172638800000 , 84.61] , [ 1175313600000 , 92.91] , [ 1177905600000 , 99.8] , [ 1180584000000 , 121.191] , [ 1183176000000 , 122.04] , [ 1185854400000 , 131.76] , [ 1188532800000 , 138.48] , [ 1191124800000 , 153.47] , [ 1193803200000 , 189.95] , [ 1196398800000 , 182.22] , [ 1199077200000 , 198.08] , [ 1201755600000 , 135.36] , [ 1204261200000 , 125.02] , [ 1206936000000 , 143.5] , [ 1209528000000 , 173.95] , [ 1212206400000 , 188.75] , [ 1214798400000 , 167.44] , [ 1217476800000 , 158.95] , [ 1220155200000 , 169.53] , [ 1222747200000 , 113.66] , [ 1225425600000 , 107.59] , [ 1228021200000 , 92.67] , [ 1230699600000 , 85.35] , [ 1233378000000 , 90.13] , [ 1235797200000 , 89.31] , [ 1238472000000 , 105.12] , [ 1241064000000 , 125.83] , [ 1243742400000 , 135.81] , [ 1246334400000 , 142.43] , [ 1249012800000 , 163.39] , [ 1251691200000 , 168.21] , [ 1254283200000 , 185.35] , [ 1256961600000 , 188.5] , [ 1259557200000 , 199.91] , [ 1262235600000 , 210.732] , [ 1264914000000 , 192.063] , [ 1267333200000 , 204.62] , [ 1270008000000 , 235.0] , [ 1272600000000 , 261.09] , [ 1275278400000 , 256.88] , [ 1277870400000 , 251.53] , [ 1280548800000 , 257.25] , [ 1283227200000 , 243.1] , [ 1285819200000 , 283.75] , [ 1288497600000 , 300.98] , [ 1291093200000 , 311.15] , [ 1293771600000 , 322.56] , [ 1296450000000 , 339.32] , [ 1298869200000 , 353.21] , [ 1301544000000 , 348.5075] , [ 1304136000000 , 350.13] , [ 1306814400000 , 347.83] , [ 1309406400000 , 335.67] , [ 1312084800000 , 390.48] , [ 1314763200000 , 384.83] , [ 1317355200000 , 381.32] , [ 1320033600000 , 404.78] , [ 1322629200000 , 382.2] , [ 1325307600000 , 405.0] , [ 1327986000000 , 456.48] , [ 1330491600000 , 542.44] , [ 1333166400000 , 599.55] , [ 1335758400000 , 583.98]]
-  }
-]
-;*/
-  chartGen(forChartData,viewId,minMaxDateArr); 
+
+  chartGen(forChartData,viewId,minMaxDateArr,options); 
   
   function debugFn(){
+  arrToHex=function(data,f,view){
+  
+    var nameArr = getArr(f, 'name', view);
+    console.log("nameArr", nameArr);
+    var idArr = getArr(f, 'id', view);
+    console.log("idArr:", JSON.stringify(idArr));
+    var processedIdArr = [];
+    _.each(idArr, function(d, i) {
+        if (_.str.include(d,"#{") == true || _.str.include(d,"|") == true) {
+            processedIdArr.push(d);
+        } else
+            processedIdArr.push("#[" + d + "]");
+    });
+    var combineArr = [];
+    processedIdArr.forEach(function(d, i) {
+
+        if (i === 0) {
+            var obj = 'FYEAR' + d;
+        } else if (i > 0) var obj = nameArr[i] + d;
+        combineArr.push(obj);
+    })
+    var globalArr = [];
+    data.forEach(function(d, i) {
+        var localObj = _.object(combineArr, d);
+        globalArr.push(localObj);
+    })
+    return globalArr;
+
+  };
+  hexToModel1=function(data,legendKey,valueOpBool){
+   var ReadArray, columnNameArray, model_keyArray, objKey,keyArray;
+    ReadArray = [];
+    objKey = Object.keys(data[0]);
+	console.log("before objKey",objKey);
+    model_keyArray = [];
+    columnNameArray = [];
+	keyArray=[];
+    objKey.forEach(function(key) {
+        var columnNameObj, model_keyObj;
+ 		if (valueOpBool=='needValueOp') {
+			if (_.str.include(key,"?id")==true  ) {
+			keyArray.push(key);
+			}
+		} else {
+		if (_.str.include(key,"?id")==false && (_.str.include(key,"|")==false)) {
+			keyArray.push(key);
+			}
+		
+		}
+     
+    });
+ 
+	console.log("inside keyArray",JSON.stringify(keyArray));
+    data.forEach(function(d, i) {
+        var Category, ColumnName, GroupNameArr, Model, ReadObj, Value, lastGroupby, propertyName;
+        ReadObj = {};
+        Value = void 0;
+        ColumnName = void 0;
+        Category = void 0;
+        Model = void 0;
+        lastGroupby = void 0;
+        GroupNameArr = [];
+        for (propertyName in d) {
+            if (_.str.include(propertyName,"xaxis") === true) {
+                Category = d[propertyName];
+            }
+            if (_.str.include(propertyName,"groupby") === true) {
+                lastGroupby = d[propertyName];
+                GroupNameArr.push(lastGroupby);
+            }
+        }
+        keyArray.forEach(function(modelKey) {
+            var allGroupby, cName, lastGroupby_op, model_keyObj, model_keyObjArr, model_yAxisObj, objPush;
+            for (propertyName in d) {
+                if (_.str.include(propertyName,modelKey) === true) {
+                    model_keyObj = propertyName.replace(/.*\[|\]/g, "");
+                    model_keyObjArr = model_keyObj.split(".");
+                    objPush = {
+                        FYEAR: d['FYEAR|'],
+                        RATIOTYPE: model_keyObjArr[0],
+                        COYNAME: d['COYNAME|'],
+                        RATIOVALUE: d[propertyName]
+                       
+                    };
+                    GroupNameArr.forEach(function(d, i) {
+                        propertyName = "groupby" + (i + 1);
+                        objPush[propertyName] = d;
+                    });
+                    if (legendKey === "lastGroupby_op") {
+                        lastGroupby_op = lastGroupby + "_" + cName;
+                        //    objPush["legendKey"] = lastGroupby_op;
+                        ReadArray.push(objPush);
+                    } else if (legendKey === "allGroupby") {
+                        allGroupby = GroupNameArr.join("_");
+                        //   objPush["legendKey"] = allGroupby;
+                        ReadArray.push(objPush);
+                    } else if (legendKey == "op(ColumnName)") {
+                        //				 objPush["legendKey"]=cName;
+                        ReadArray.push(objPush);
+                    } else if (legendKey == "ColumnName") {
+                        var regExp = /\(([^)]+)\)/;
+                        var matches = regExp.exec(cName);
+                         //	 objPush["legendKey"]=matches[1];
+                        ReadArray.push(objPush);
+                    }
+                }
+            }
+        });
+    });
+    return ReadArray;
+  };
+  getArr =function(obj, k, view) { //used on view.typeinfo to get an array of property value of the propertyName 'name'
+     var objects = [];
+     for (var i in obj) {
+         if (!obj.hasOwnProperty(i)) continue;
+         if (typeof obj[i] == 'object') {
+             objects = objects.concat(getArr(obj[i], k, view));
+         } else if (_.str.include(i,k) == true) {
+		
+             if (k == "name") {
+                 objects.push(cutTableName(obj[i], view));
+             } else
+                 objects.push(obj[i]);
+         }
+     }
+	
+     return objects;
+ };
+  cutTableName=function(stringText, view) {
+
+    var uniTable = (view.data.jsonClass === "DataAdhocTable") ? view.data.fields[0].table + "." : null;
+    var colm = (uniTable == null) ? stringText : stringText.split(uniTable)[1];
+    return colm;
+};
   forChartFn=function(processDateData,groupByDateStr){
   var aggreData=[];
   var seriesDateNest=d3.nest()
@@ -549,30 +553,41 @@ var seriesNest=d3.nest()
    xTickFn=function(minMaxDateArr) {
    
    };
-   chartGen=function(data,viewId,minMaxDateArr){
+   chartGen=function(data,viewId,minMaxDateArr,options){
 
  nv.addGraph(function() {
   
- var chart = nv.models.lineWithFocusChart()
+ var chart = nv.models
+  .lineWithFocusChart()
+  //  .linePlusBarChartWithFocus()
    .margin({top: 30, right: 60, bottom: 50, left: 70})
     .x(function(d) { return d[0] })
     //adjusting, 100% is 1.00, not 100 as it is in the data
-    .y(function(d) { return d[1] / 100 })
+    .y(function(d) { return d[1] })
     .color(d3.scale.category10().range())
     ;
 
   chart.xAxis
+   .axisLabel(options.xAxisLabel)
     .tickFormat(function(d) {
-      return d3.time.format('%x')(new Date(d))
+      return options.xTicksFormat(new Date(d));
     });
   chart.x2Axis
+  .axisLabel(options.xAxisLabel)
     .tickFormat(function(d) {
-      return d3.time.format('%x')(new Date(d))
+      return options.xTicksFormat(new Date(d));
     });
 
-  chart.yAxis.tickFormat(d3.format(',.1%'));
+  chart.yAxis
+   .axisLabel(options.yAxisLabel)
+  .tickFormat(function(d) {
+  return options.yTicksFormat(d);});
 
-   chart.y2Axis.tickFormat(d3.format(',.1%'));
+   chart.y2Axis
+   .axisLabel(options.yAxisLabel)
+  .tickFormat(function(d) {
+   return options.yTicksFormat(d);});
+ 
     d3.select('#chart_'+viewId +' svg')
       .datum(data)
       .transition().duration(500)
