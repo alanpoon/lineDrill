@@ -2,7 +2,7 @@
 {
    "id":"LineDrill",
    "name":"LineDrill",
-   "category":"general",
+   "category":"Chart",
    "default":{
       "jsonClass":"View",
       "elxType":"View",
@@ -155,42 +155,28 @@
     "jsonClass":"Row",
     "cols":[{
       "jsonClass":"Label",
-      "id":"typeinfo-height-label",
+      "id":"typeinfo-frameHeight-label",
       "type":"label",
       "text":"Chart Height"
     },{
       "jsonClass":"Field",
-      "id":"typeinfo-chartHeight",
+      "id":"typeinfo-frameHeight",
       "type":"field",
-      "value":"${typeinfo.chartHight}",
+      "value":"${typeinfo.frameHeight}",
       "readonly":false
     }]
   },{
     "jsonClass":"Row",
     "cols":[{
       "jsonClass":"Label",
-      "id":"typeinfo-width-label",
+      "id":"typeinfo-frameWidth-label",
       "type":"label",
       "text":"Chart Width"
     },{
       "jsonClass":"Field",
-      "id":"typeinfo-chartWidth",
+      "id":"typeinfo-frameWidth",
       "type":"field",
-      "value":"${typeinfo.chartWidth}",
-      "readonly":false
-    }]
-  },{
-    "jsonClass":"Row",
-    "cols":[{
-      "jsonClass":"Label",
-      "id":"typeinfo-centre-label",
-      "type":"label",
-      "text":"Chart centre"
-    },{
-      "jsonClass":"Field",
-      "id":"typeinfo-chartCentre",
-      "type":"field",
-      "value":"${typeinfo.chartCentre}",
+      "value":"${typeinfo.frameWidth}",
       "readonly":false
     }]
   },{
@@ -337,7 +323,7 @@ text{font:12px sans-serif}svg{display:block}.chartWrap{margin:0;padding:0;overfl
 <div class='elx-script'>
 
  var viewId=view.id;
-var div = $("#${id}");
+var div = $("#"+viewId);
   var xTicksFormat,yTicksFormat;
   eval(view.typeinfo.xTicksFormatCast);
   eval(view.typeinfo.yTicksFormatCast);
@@ -377,18 +363,11 @@ var div = $("#${id}");
  console.log('forChartData', JSON.stringify(forChartData));
 var minMaxDateArr=minMaxDateFn(processDateData);
 console.log("minMaxDateArr",minMaxDateArr);
-var chart;
+  var chart={};
   chartGen(forChartData,viewId,minMaxDateArr,options); 
-    	elx.host.setupAutoResize(div, function(w,h){
-  console.log("trying");
-  	if(w != parseInt(view.typeinfo.frameWidth) || h != parseInt(view.typeinfo.frameHeight)){
-  console.log("autoResized, h:",h);
-  
-	chart.height(h-80);
- 	 chart.width(w);
-  chart.update();
-  		}
-    });
+  console.log("chart:",chart);
+
+  console.log("done trying");
   function debugFn(){
   arrToHex=function(data,f,view){
   
@@ -578,7 +557,8 @@ var seriesNest=d3.nest()
     .y(function(d) { return d[1] })
     .color(d3.scale.category10().range())
     ;
-
+chart.height(options.frameHeight-90)
+  .width(options.frameWidth);
   chart.xAxis
    .axisLabel(options.xAxisLabel)
     .tickFormat(function(d) {
@@ -607,7 +587,17 @@ var seriesNest=d3.nest()
       ;
  console.log("d3.select",d3.select('#chart_'+viewId));
   //  nv.utils.windowResize(chart.update);
-
+  elx.host.setupAutoResize($('#'+viewId), function(w,h){
+  console.log("trying");
+  	if(w != parseInt(options.frameWidth) || h != parseInt(options.frameHeight)){
+  console.log("autoResized, h:",h);
+  
+	chart.height(h-80);
+ 	 chart.width(w);
+  chart.update();
+  		}
+    });
+  
     return chart;
 });
 
